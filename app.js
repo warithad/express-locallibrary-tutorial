@@ -47,6 +47,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.listen(process.env.PORT, ()=>{
+  console.log(`listening on PORT: ${process.env.PORT}`)
+})
+
 const mongoose = require("mongoose");
 const { mainModule } = require('process');
 mongoose.set('strictQuery', false);
